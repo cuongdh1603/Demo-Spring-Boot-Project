@@ -1,0 +1,12 @@
+@charset "UTF-8";
+body header{
+    font-family: "Roboto", sans-serif;
+
+}
+.nav-item .nav-link:hover{
+    color: white;
+    background: white;
+}
+.nav-item:hover{
+    background: white;
+}
