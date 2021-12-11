@@ -1,7 +1,6 @@
 @charset "UTF-8";
-body header{
+nav,footer{
     font-family: "Roboto", sans-serif;
-
 }
 .nav-item .nav-link:hover{
     color: white;
