@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+				xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+	<div th:replace="fragments/header :: header-html"/>
+</head>
+<body>
+	<div th:replace="fragments/header :: header"/>
+	<div class="container d-flex h-100 p-3 mx-auto flex-column" th:object="${dt_employee}">
+		<label>First name: </label>
+		<div th:text="${dt_employee.firstName}"></div>
+		<label>Last name: </label>
+		<div th:text="${dt_employee.lastName}"></div>
+		<label>Email: </label>
+		<div th:text="${dt_employee.email}"></div>
+	</div>
+	<div th:replace="fragments/footer :: footer"/>	
+</body>
+</html>

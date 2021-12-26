@@ -6,6 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+
+
 
 @Entity
 @Table(name = "employees")
@@ -20,6 +24,8 @@ public class Employee {
 	private String lastName;
 	@Column(name = "email")
 	private String email;
+	@Column(name = "photo")
+	private String photo;
 	public long getId() {
 		return id;
 	}
@@ -44,5 +50,15 @@ public class Employee {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 	
+	public String getPhotoPath() {
+		if(photo==null) return null;
+		return "/image/"+id+"/"+photo;
+	}
 }

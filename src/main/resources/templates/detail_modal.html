@@ -1,0 +1,15 @@
+<div class="modal-header">
+	<h4 class="modal-title" id="modalTitle">Infor M</h4>
+	<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+	<div class="container d-flex h-100 p-3 mx-auto flex-column" th:object="${dt_employee}">
+		<label>First name: </label>
+		<div th:text="${dt_employee.firstName}"></div>
+		<label>Last name: </label>
+		<div th:text="${dt_employee.lastName}"></div>
+		<label>Email: </label>
+		<div th:text="${dt_employee.email}"></div>
+	</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-danger" data-dismiss="modal"></button>
+</div>

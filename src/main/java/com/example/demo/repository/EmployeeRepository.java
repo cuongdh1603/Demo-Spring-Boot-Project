@@ -15,6 +15,9 @@ import com.example.demo.model.Employee;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 	@Query(value = "SELECT * FROM EMPLOYEES WHERE ID = :id",nativeQuery = true)
 	Employee getEmployeeById(long id);
+	@Query(value = "select * from employees where"
+			+ " id = (select max(id) from employees)",nativeQuery = true)
+	Employee getLastestEmployee();
 	@Modifying
 	@Transactional
 	@Query(value = "DELETE FROM EMPLOYEES WHERE ID = :id",nativeQuery = true)
